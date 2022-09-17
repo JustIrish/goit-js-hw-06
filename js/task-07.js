@@ -1,6 +1,8 @@
 const inputRange = document.querySelector("#font-size-control");
 const text = document.querySelector("#text");
 
+inputRange.value = inputRange.min;
+
 inputRange.addEventListener("input", onInputChange);
 
 function onInputChange() {
