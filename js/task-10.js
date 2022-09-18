@@ -17,17 +17,18 @@ function hendlerInput() {
   return inputEl.value;
 }
 
-
-
 function createBoxes(amount) {
   amount = hendlerInput();
-let size = 30;
+  let size = 30;
+  let boxesArrey = [];
+
   for (let i = 0; i < amount; i += 1) {
     let str = `<div style = "width: ${size}px; height: ${size}px; background-color: ${getRandomHexColor()}"></div>`;
-    boxes.insertAdjacentHTML("afterbegin", str);
+    boxesArrey.push(str);
     size += 10;
   }
-  
+
+  boxes.insertAdjacentHTML("afterbegin", boxesArrey.join(""));
 }
 
 function destroyBoxes() {
